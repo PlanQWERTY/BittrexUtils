@@ -1,0 +1,4 @@
+D:\BittrexSharp-master\BittrexSharp\obj\Debug\netstandard1.0\BittrexSharp.csprojResolveAssemblyReference.cache
+D:\BittrexSharp-master\BittrexSharp\obj\Debug\netstandard1.0\BittrexSharp.csproj.CoreCompileInputs.cache
+D:\BittrexSharp-master\BittrexSharp\obj\Debug\netstandard1.0\BittrexSharp.AssemblyInfoInputs.cache
+D:\BittrexSharp-master\BittrexSharp\obj\Debug\netstandard1.0\BittrexSharp.AssemblyInfo.cs
