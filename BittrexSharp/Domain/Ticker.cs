@@ -12,6 +12,7 @@ namespace BittrexSharp.Domain
         public decimal? Last { get; set; }
     }
 
+    //Bittrex V2 block added
     public class TickerV2
     {
         public string MarketName { get; set; }

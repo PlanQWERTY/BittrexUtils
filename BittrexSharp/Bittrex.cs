@@ -17,9 +17,11 @@ namespace BittrexSharp
     public class Bittrex : IBittrex
     {
         public const string Version1 = "v1.1";
+        //Bittrex V2 block added
         public const string Version2 = "v2.0";
-        public const string BaseUrl1 = "https://bittrex.com/api/" + Version1 + "/";
-        public const string BaseUrl2 = "https://bittrex.com/api/" + Version2 + "/";
+        public const string BaseUrl = "https://bittrex.com/api/";
+        //public const string BaseUrl1 = "https://bittrex.com/api/" + Version1 + "/";
+        //public const string BaseUrl2 = "https://bittrex.com/api/" + Version2 + "/";
         public const string SignHeaderName = "apisign";
 
         private readonly Encoding encoding = Encoding.UTF8;
@@ -144,7 +146,7 @@ namespace BittrexSharp
         /// <returns></returns>
         public virtual async Task<ResponseWrapper<IEnumerable<Market>>> GetMarkets()
         {
-            var uri = BaseUrl1 + "public/getmarkets";
+            var uri = BaseUrl + Version1 + "/public/getmarkets";
             var marketsResponse = await request<IEnumerable<Market>>(HttpMethod.Get, uri, false);
             return marketsResponse;
         }
@@ -155,7 +157,7 @@ namespace BittrexSharp
         /// <returns></returns>
         public virtual async Task<ResponseWrapper<IEnumerable<SupportedCurrency>>> GetSupportedCurrencies()
         {
-            var uri = BaseUrl1 + "public/getcurrencies";
+            var uri = BaseUrl + Version1 + "/public/getcurrencies";
             var supportedCurrenciesResponse = await request<IEnumerable<SupportedCurrency>>(HttpMethod.Get, uri, false);
             return supportedCurrenciesResponse;
         }
@@ -169,7 +171,7 @@ namespace BittrexSharp
 
         public virtual async Task<ResponseWrapper<Ticker>> GetTicker(string marketName)
         {
-            var uri = BaseUrl1 + "public/getticker";
+            var uri = BaseUrl + Version1 + "/public/getticker";
             var parameters = new Dictionary<string, string>
             {
                 { "market", marketName }
@@ -181,10 +183,10 @@ namespace BittrexSharp
             return tickerResponse;
         }
 
-        //Bittrex v2
+        //Bittrex V2 block added
         public virtual async Task<ResponseWrapper<IEnumerable<TickerV2>>> GetTicker(string marketName, string tickInterval, UInt64 timeStamp)
         {
-            var uri = BaseUrl2 + "pub/market/GetTicks";
+            var uri = BaseUrl + Version2 + "/pub/market/GetTicks";
             var parameters = new Dictionary<string, string>
             {
                 { "marketName", marketName },
@@ -193,8 +195,8 @@ namespace BittrexSharp
 
             };
             var tickerResponse = await request <IEnumerable<TickerV2>>(HttpMethod.Get, uri, parameters, false);
-            //if (tickerResponse.ResultV2 != null)
-                //tickerResponse.ResultV2.MarketName = marketName;
+            if (tickerResponse.ResultV2 != null)
+                tickerResponse.ResultV2.SingleOrDefault().SingleOrDefault().MarketName = marketName;
             return tickerResponse;
         }
 
@@ -204,7 +206,7 @@ namespace BittrexSharp
         /// <returns></returns>
         public virtual async Task<ResponseWrapper<IEnumerable<MarketSummary>>> GetMarketSummaries()
         {
-            var uri = BaseUrl1 + "public/getmarketsummaries";
+            var uri = BaseUrl + Version1 + "/public/getmarketsummaries";
             var marketSummariesResponse = await request<IEnumerable<MarketSummary>>(HttpMethod.Get, uri, false);
             return marketSummariesResponse;
         }
@@ -216,7 +218,7 @@ namespace BittrexSharp
         /// <returns></returns>
         public virtual async Task<ResponseWrapper<MarketSummary>> GetMarketSummary(string marketName)
         {
-            var uri = BaseUrl1 + "public/getmarketsummary";
+            var uri = BaseUrl + Version1 + "/public/getmarketsummary";
             var parameters = new Dictionary<string, string>
             {
                 { "market", marketName }
@@ -239,7 +241,7 @@ namespace BittrexSharp
         /// <returns></returns>
         public virtual async Task<ResponseWrapper<OrderBook>> GetOrderBook(string marketName, string orderType, int depth)
         {
-            var uri = BaseUrl1 + "public/getorderbook";
+            var uri = BaseUrl + Version1 + "/public/getorderbook";
             var parameters = new Dictionary<string, string>
             {
                 { "market", marketName },
@@ -277,7 +279,7 @@ namespace BittrexSharp
         /// <returns></returns>
         public virtual async Task<ResponseWrapper<IEnumerable<Trade>>> GetMarketHistory(string marketName)
         {
-            var uri = BaseUrl1 + "public/getmarkethistory";
+            var uri = BaseUrl + Version1 + "/public/getmarkethistory";
             var parameters = new Dictionary<string, string>
             {
                 { "market", marketName }
@@ -297,7 +299,7 @@ namespace BittrexSharp
         /// <returns></returns>
         public virtual async Task<ResponseWrapper<AcceptedOrder>> BuyLimit(string marketName, decimal quantity, decimal rate)
         {
-            var uri = BaseUrl1 + "market/buylimit";
+            var uri = BaseUrl + Version1 + "/market/buylimit";
             var parameters = new Dictionary<string, string>
             {
                 { "market", marketName },
@@ -317,7 +319,7 @@ namespace BittrexSharp
         /// <returns></returns>
         public virtual async Task<ResponseWrapper<AcceptedOrder>> SellLimit(string marketName, decimal quantity, decimal rate)
         {
-            var uri = BaseUrl1 + "market/selllimit";
+            var uri = BaseUrl + Version1 + "/market/selllimit";
             var parameters = new Dictionary<string, string>
             {
                 { "market", marketName },
@@ -335,7 +337,7 @@ namespace BittrexSharp
         /// <returns></returns>
         public virtual async Task<ResponseWrapper<object>> CancelOrder(string orderId)
         {
-            var uri = BaseUrl1 + "market/cancel";
+            var uri = BaseUrl + Version1 + "/market/cancel";
             var parameters = new Dictionary<string, string>
             {
                 { "uuid", orderId }
@@ -350,7 +352,7 @@ namespace BittrexSharp
         /// <returns></returns>
         public virtual async Task<ResponseWrapper<IEnumerable<OpenOrder>>> GetOpenOrders(string marketName = null)
         {
-            var uri = BaseUrl1 + "market/getopenorders";
+            var uri = BaseUrl + Version1 + "/market/getopenorders";
             var parameters = new Dictionary<string, string>();
             if (marketName != null) parameters.Add("market", marketName);
 
@@ -366,7 +368,7 @@ namespace BittrexSharp
         /// <returns></returns>
         public virtual async Task<ResponseWrapper<IEnumerable<CurrencyBalance>>> GetBalances()
         {
-            var uri = BaseUrl1 + "account/getbalances";
+            var uri = BaseUrl + Version1 + "/account/getbalances";
             var balancesResponse = await request<IEnumerable<CurrencyBalance>>(HttpMethod.Get, uri);
             return balancesResponse;
         }
@@ -378,7 +380,7 @@ namespace BittrexSharp
         /// <returns></returns>
         public virtual async Task<ResponseWrapper<CurrencyBalance>> GetBalance(string currency)
         {
-            var uri = BaseUrl1 + "account/getbalance";
+            var uri = BaseUrl + Version1 + "/account/getbalance";
             var parameters = new Dictionary<string, string>
             {
                 { "currency", currency }
@@ -394,7 +396,7 @@ namespace BittrexSharp
         /// <returns></returns>
         public virtual async Task<ResponseWrapper<DepositAddress>> GetDepositAddress(string currency)
         {
-            var uri = BaseUrl1 + "account/getdepositaddress";
+            var uri = BaseUrl + Version1 + "/account/getdepositaddress";
             var parameters = new Dictionary<string, string>
             {
                 { "currency", currency }
@@ -413,7 +415,7 @@ namespace BittrexSharp
         /// <returns></returns>
         public virtual async Task<ResponseWrapper<AcceptedWithdrawal>> Withdraw(string currency, decimal quantity, string address, string paymentId = null)
         {
-            var uri = BaseUrl1 + "account/withdraw";
+            var uri = BaseUrl + Version1 + "/account/withdraw";
             var parameters = new Dictionary<string, string>
             {
                 { "currency", currency },
@@ -432,7 +434,7 @@ namespace BittrexSharp
         /// <returns></returns>
         public virtual async Task<ResponseWrapper<Order>> GetOrder(string orderId)
         {
-            var uri = BaseUrl1 + "account/getorder";
+            var uri = BaseUrl + Version1 + "/account/getorder";
             var parameters = new Dictionary<string, string>
             {
                 { "uuid", orderId }
@@ -448,7 +450,7 @@ namespace BittrexSharp
         /// <returns></returns>
         public virtual async Task<ResponseWrapper<IEnumerable<HistoricOrder>>> GetOrderHistory(string marketName = null)
         {
-            var uri = BaseUrl1 + "account/getorderhistory";
+            var uri = BaseUrl + Version1 + "/account/getorderhistory";
             var parameters = new Dictionary<string, string>();
             if (marketName != null) parameters.Add("market", marketName);
 
@@ -463,7 +465,7 @@ namespace BittrexSharp
         /// <returns></returns>
         public virtual async Task<ResponseWrapper<IEnumerable<HistoricWithdrawal>>> GetWithdrawalHistory(string currency = null)
         {
-            var uri = BaseUrl1 + "account/getwithdrawalhistory";
+            var uri = BaseUrl + Version1 + "/account/getwithdrawalhistory";
             var parameters = new Dictionary<string, string>();
             if (currency != null) parameters.Add("currency", currency);
 
@@ -478,7 +480,7 @@ namespace BittrexSharp
         /// <returns></returns>
         public virtual async Task<ResponseWrapper<IEnumerable<HistoricDeposit>>> GetDepositHistory(string currency = null)
         {
-            var uri = BaseUrl1 + "account/getdeposithistory";
+            var uri = BaseUrl + Version1 + "/account/getdeposithistory";
             var parameters = new Dictionary<string, string>();
             if (currency != null) parameters.Add("currency", currency);
 

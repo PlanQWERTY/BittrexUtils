@@ -3637,7 +3637,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ProleyevNE\\.nuget\\packages\\": {},
+    "C:\\Users\\Nik\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
@@ -3649,14 +3649,14 @@
       "projectUniqueName": "D:\\!Work\\!Bit\\BittrexUtils\\BittrexUtilsConsole\\BittrexUtilsConsole.csproj",
       "projectName": "BittrexUtilsConsole",
       "projectPath": "D:\\!Work\\!Bit\\BittrexUtils\\BittrexUtilsConsole\\BittrexUtilsConsole.csproj",
-      "packagesPath": "C:\\Users\\ProleyevNE\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\Nik\\.nuget\\packages\\",
       "outputPath": "D:\\!Work\\!Bit\\BittrexUtils\\BittrexUtilsConsole\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\ProleyevNE\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Nik\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3664,6 +3664,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "http://vm-build2.ibpsoft/api/v2/": {},
         "https://www.nuget.org/api/v2/": {}
       },
       "frameworks": {

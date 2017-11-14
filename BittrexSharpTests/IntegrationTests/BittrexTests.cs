@@ -18,6 +18,7 @@ namespace Tests.IntegrationTests
         private const string DefaultApiKey = "";
         private const string DefaultApiSecret = "";
         private const string DefaultTargetAddress = "";
+        //Bittrex V2 block added
         private const string tickInterval = "thirtyMin";
         private const UInt64 timeStamp = 1500915289433;
 
@@ -46,6 +47,7 @@ namespace Tests.IntegrationTests
             action.ShouldNotThrow();
         }
 
+        //Bittrex V2 block added
         [TestMethod]
         public void GetTickerv2_ShouldNotThrowException()
         {
