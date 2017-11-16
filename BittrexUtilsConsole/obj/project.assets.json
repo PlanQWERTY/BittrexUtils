@@ -3646,11 +3646,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "D:\\!Work\\!Bit\\BittrexUtils\\BittrexUtilsConsole\\BittrexUtilsConsole.csproj",
+      "projectUniqueName": "d:\\!Work\\!Bit\\BittrexUtils\\BittrexUtilsConsole\\BittrexUtilsConsole.csproj",
       "projectName": "BittrexUtilsConsole",
-      "projectPath": "D:\\!Work\\!Bit\\BittrexUtils\\BittrexUtilsConsole\\BittrexUtilsConsole.csproj",
+      "projectPath": "d:\\!Work\\!Bit\\BittrexUtils\\BittrexUtilsConsole\\BittrexUtilsConsole.csproj",
       "packagesPath": "C:\\Users\\Nik\\.nuget\\packages\\",
-      "outputPath": "D:\\!Work\\!Bit\\BittrexUtils\\BittrexUtilsConsole\\obj\\",
+      "outputPath": "d:\\!Work\\!Bit\\BittrexUtils\\BittrexUtilsConsole\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -3670,8 +3670,8 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "D:\\!Work\\!Bit\\BittrexUtils\\BittrexSharp\\BittrexSharp.csproj": {
-              "projectPath": "D:\\!Work\\!Bit\\BittrexUtils\\BittrexSharp\\BittrexSharp.csproj"
+            "d:\\!Work\\!Bit\\BittrexUtils\\BittrexSharp\\BittrexSharp.csproj": {
+              "projectPath": "d:\\!Work\\!Bit\\BittrexUtils\\BittrexSharp\\BittrexSharp.csproj"
             }
           }
         }

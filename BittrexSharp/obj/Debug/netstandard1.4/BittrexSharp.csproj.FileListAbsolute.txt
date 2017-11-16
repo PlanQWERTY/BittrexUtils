@@ -16,3 +16,12 @@ D:\BittrexUtils\BittrexSharp\obj\Debug\netstandard1.4\BittrexSharp.AssemblyInfoI
 D:\BittrexUtils\BittrexSharp\obj\Debug\netstandard1.4\BittrexSharp.AssemblyInfo.cs
 D:\BittrexUtils\BittrexSharp\obj\Debug\netstandard1.4\BittrexSharp.dll
 D:\BittrexUtils\BittrexSharp\obj\Debug\netstandard1.4\BittrexSharp.pdb
+d:\!Work\!Bit\BittrexUtils\BittrexSharp\bin\Debug\netstandard1.4\BittrexSharp.deps.json
+d:\!Work\!Bit\BittrexUtils\BittrexSharp\bin\Debug\netstandard1.4\BittrexSharp.dll
+d:\!Work\!Bit\BittrexUtils\BittrexSharp\bin\Debug\netstandard1.4\BittrexSharp.pdb
+d:\!Work\!Bit\BittrexUtils\BittrexSharp\obj\Debug\netstandard1.4\BittrexSharp.csprojResolveAssemblyReference.cache
+d:\!Work\!Bit\BittrexUtils\BittrexSharp\obj\Debug\netstandard1.4\BittrexSharp.csproj.CoreCompileInputs.cache
+d:\!Work\!Bit\BittrexUtils\BittrexSharp\obj\Debug\netstandard1.4\BittrexSharp.AssemblyInfoInputs.cache
+d:\!Work\!Bit\BittrexUtils\BittrexSharp\obj\Debug\netstandard1.4\BittrexSharp.AssemblyInfo.cs
+d:\!Work\!Bit\BittrexUtils\BittrexSharp\obj\Debug\netstandard1.4\BittrexSharp.dll
+d:\!Work\!Bit\BittrexUtils\BittrexSharp\obj\Debug\netstandard1.4\BittrexSharp.pdb

@@ -194,9 +194,11 @@ namespace BittrexSharp
                 { "_", timeStamp.ToString() }
 
             };
-            var tickerResponse = await request <IEnumerable<TickerV2>>(HttpMethod.Get, uri, parameters, false);
-            if (tickerResponse.ResultV2 != null)
-                tickerResponse.ResultV2.SingleOrDefault().SingleOrDefault().MarketName = marketName;
+            var tickerResponse = await request <IEnumerable<TickerV2>>(HttpMethod.Get, uri, parameters, false);            
+            if (tickerResponse.Result != null)                
+                foreach (TickerV2 item in tickerResponse.Result)
+                    item.MarketName = marketName;
+
             return tickerResponse;
         }
 

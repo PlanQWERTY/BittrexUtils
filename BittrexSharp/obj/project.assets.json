@@ -4538,11 +4538,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "D:\\!Work\\!Bit\\BittrexUtils\\BittrexSharp\\BittrexSharp.csproj",
+      "projectUniqueName": "d:\\!Work\\!Bit\\BittrexUtils\\BittrexSharp\\BittrexSharp.csproj",
       "projectName": "BittrexSharp",
-      "projectPath": "D:\\!Work\\!Bit\\BittrexUtils\\BittrexSharp\\BittrexSharp.csproj",
+      "projectPath": "d:\\!Work\\!Bit\\BittrexUtils\\BittrexSharp\\BittrexSharp.csproj",
       "packagesPath": "C:\\Users\\Nik\\.nuget\\packages\\",
-      "outputPath": "D:\\!Work\\!Bit\\BittrexUtils\\BittrexSharp\\obj\\",
+      "outputPath": "d:\\!Work\\!Bit\\BittrexUtils\\BittrexSharp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
